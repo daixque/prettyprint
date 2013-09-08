@@ -5,11 +5,11 @@ require 'prettyprint/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "prettyprint"
-  spec.version       = Prettyprint::VERSION
+  spec.version       = PrettyPrint::VERSION
   spec.authors       = ["daixque"]
   spec.email         = ["daixque@gmail.com"]
-  spec.description   = %q{pretty printer for json and xml}
-  spec.summary       = %q{pretty printer for json and xml}
+  spec.description   = %q{cli tool for pretty printing}
+  spec.summary       = %q{cli tool for pretty printing}
   spec.homepage      = "https://github.com/daixque"
   spec.license       = "MIT"
 
@@ -17,7 +17,9 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
+  spec.executables   = ["prettyprint"]
 
+  spec.add_dependency "thor"
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
 end

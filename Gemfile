@@ -1,1 +1,3 @@
-gem 'thor'
+source "http://rubygems.org"
+
+gemspec
