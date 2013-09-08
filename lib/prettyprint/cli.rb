@@ -16,7 +16,6 @@ module PrettyPrint
     desc :xml, "pretty printing XML expression."
     def xml(filename = nil)
       src = read(filename)
-      #doc = Nokogiri::XML(src)
       doc = REXML::Document.new src
       out = ""
       doc.write(out, 1)
